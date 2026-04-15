@@ -1,0 +1,55 @@
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ─── Design Tokens ─── */
+:root {
+  --forest:       #1a3c2a;
+  --forest-light: #2a5e40;
+  --sage:         #7a9e7e;
+  --sage-light:   #b8ccba;
+  --cream:        #faf8f4;
+  --warm:         #f0ebe1;
+  --gold:         #c8a84e;
+  --gold-light:   #e8d48e;
+  --coral:        #d4715e;
+  --text:         #1a2a1a;
+  --text-muted:   #5a6e5a;
+
+  --font-display: var(--font-playfair), 'Playfair Display', serif;
+  --font-body:    var(--font-dm-sans), 'DM Sans', sans-serif;
+}
+
+/* ─── Base ─── */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--cream);
+}
+
+/* ─── Keyframes ─── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bobble {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}

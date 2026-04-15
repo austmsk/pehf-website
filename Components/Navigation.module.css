@@ -1,0 +1,134 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.nav.scrolled {
+  background: rgba(250, 248, 244, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 20px rgba(26, 60, 42, 0.08);
+}
+
+.navInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+}
+
+.navLogo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.4s;
+}
+
+.nav.scrolled .navLogo {
+  color: var(--forest);
+}
+
+.navLogoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--forest), var(--forest-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: white;
+}
+
+.nav.scrolled .navLinks a {
+  color: var(--text-muted);
+}
+
+.nav.scrolled .navLinks a:hover {
+  color: var(--forest);
+}
+
+.navDonate {
+  background: var(--forest) !important;
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px;
+  transition: all 0.3s !important;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav.scrolled .navDonate {
+  border-color: transparent;
+}
+
+.navDonate:hover {
+  background: var(--forest-light) !important;
+  transform: translateY(-1px);
+  color: white !important;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+.nav.scrolled .hamburger span {
+  background: var(--forest);
+}
+
+@media (max-width: 600px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
