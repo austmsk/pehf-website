@@ -1,0 +1,327 @@
+/* ─── Hero ─── */
+.hero {
+  background: var(--cream);
+  padding: 160px 32px 100px;
+  border-bottom: 1px solid rgba(26, 60, 42, 0.06);
+}
+
+.heroInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--coral);
+}
+
+.heroDesc {
+  font-size: 18px;
+  line-height: 1.78;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ─── Section Tag ─── */
+.sectionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 16px;
+}
+
+.sectionTag::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold);
+  display: block;
+}
+
+/* ─── Program Sections ─── */
+.bgCream { background: var(--cream); }
+.bgWarm  { background: var(--warm); }
+
+.programSection {
+  padding: 100px 0;
+}
+
+.programRow {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Reverse visual order for even programs: image right, content left */
+.programRowReversed .imageWrapper {
+  order: 2;
+}
+
+.programRowReversed .contentWrapper {
+  order: 1;
+}
+
+/* ─── Image Placeholder ─── */
+.imageWrapper {
+  /* wrapper used for FadeIn targeting */
+}
+
+.imagePlaceholder {
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  /* TODO: replace with next/image when photography is available */
+}
+
+.imageForest { background: var(--forest); }
+.imageGold   { background: var(--gold); }
+.imageSage   { background: var(--sage); }
+.imageCoral  { background: var(--coral); }
+
+/* ─── Program Content ─── */
+.contentWrapper {
+  /* wrapper used for FadeIn targeting */
+}
+
+.programContent {
+  max-width: 480px;
+}
+
+.programTitle {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.programDesc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.programStat {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(26, 60, 42, 0.08);
+}
+
+.programStatValue {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+}
+
+.programStatLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.programLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.programLink:hover {
+  gap: 14px;
+}
+
+.programLink:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+  gap: 14px;
+}
+
+/* ─── CTA ─── */
+.cta {
+  background: var(--forest);
+  padding: 100px 32px;
+}
+
+.ctaInner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaDecor {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 40px;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 40px;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─── Buttons ─── */
+.btnGold {
+  background: var(--gold);
+  color: var(--forest);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: none;
+  font-family: var(--font-body);
+}
+
+.btnGold:hover,
+.btnGold:focus-visible {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 168, 78, 0.3);
+}
+
+.btnGold:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+.btnGhost {
+  background: transparent;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
+  transition: border-color 0.3s, background 0.3s;
+  font-family: var(--font-body);
+}
+
+.btnGhost:hover,
+.btnGhost:focus-visible {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.btnGhost:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ─── Responsive — 900px ─── */
+@media (max-width: 900px) {
+  .hero {
+    padding: 140px 32px 80px;
+  }
+
+  .programRow {
+    padding: 0 32px;
+    gap: 48px;
+  }
+}
+
+/* ─── Responsive — 600px ─── */
+@media (max-width: 600px) {
+  .hero {
+    padding: 120px 24px 64px;
+  }
+
+  .heroDesc {
+    font-size: 16px;
+  }
+
+  .programSection {
+    padding: 64px 0;
+  }
+
+  .programRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  /* Always show image on top on mobile, regardless of reversed state */
+  .programRowReversed .imageWrapper {
+    order: -1;
+  }
+
+  .programRowReversed .contentWrapper {
+    order: 0;
+  }
+
+  .imagePlaceholder {
+    aspect-ratio: 3 / 2;
+  }
+
+  .programContent {
+    max-width: 100%;
+  }
+
+  .cta {
+    padding: 72px 24px;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

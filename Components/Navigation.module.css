@@ -65,10 +65,16 @@
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: color 0.3s;
+  border-radius: 3px;
 }
 
 .navLinks a:hover {
   color: white;
+}
+
+.navLinks a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .nav.scrolled .navLinks a {
@@ -79,27 +85,36 @@
   color: var(--forest);
 }
 
-.navDonate {
-  background: var(--forest) !important;
-  color: white !important;
+.nav.scrolled .navLinks a:focus-visible {
+  outline-color: var(--forest);
+}
+
+.navLinks .navDonate {
+  background: var(--forest);
+  color: white;
   padding: 10px 24px;
   border-radius: 50px;
-  font-weight: 600 !important;
-  font-size: 13px !important;
+  font-weight: 600;
+  font-size: 13px;
   letter-spacing: 0.5px;
-  transition: all 0.3s !important;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.nav.scrolled .navDonate {
+.nav.scrolled .navLinks .navDonate {
   border-color: transparent;
 }
 
-.navDonate:hover {
-  background: var(--forest-light) !important;
+.navLinks .navDonate:hover {
+  background: var(--forest-light);
   transform: translateY(-1px);
-  color: white !important;
+  color: white;
+}
+
+.navLinks .navDonate:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 
 .hamburger {
@@ -108,6 +123,7 @@
   border: none;
   cursor: pointer;
   padding: 4px;
+  flex-shrink: 0;
 }
 
 .hamburger span {
@@ -116,11 +132,104 @@
   height: 2px;
   background: white;
   margin: 5px 0;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav.scrolled .hamburger span {
   background: var(--forest);
+}
+
+/* Hamburger → X animation */
+.hamburgerOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburgerOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Mobile Menu ─── */
+.mobileMenu {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--cream);
+  padding: 8px 32px 32px;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  box-shadow: 0 8px 32px rgba(26, 60, 42, 0.1);
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobileLink {
+  display: block;
+  padding: 17px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 60, 42, 0.08);
+  transition: color 0.2s;
+}
+
+.mobileLink:last-of-type {
+  border-bottom: none;
+}
+
+.mobileLink:hover {
+  color: var(--forest);
+}
+
+.mobileLink:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.mobileDonate {
+  display: block;
+  margin-top: 24px;
+  padding: 17px 24px;
+  background: var(--forest);
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.mobileDonate:hover {
+  background: var(--forest-light);
+}
+
+.mobileDonate:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 50px;
+}
+
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(26, 60, 42, 0.18);
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

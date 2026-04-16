@@ -270,7 +270,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
   transition: all 0.3s;
   cursor: pointer;
   font-family: var(--font-body);
@@ -278,8 +278,8 @@
 
 .btnGhost:hover,
 .btnGhost:focus-visible {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .btnGhost:focus-visible {
@@ -337,14 +337,14 @@
 }
 
 .missionBand h2 em {
-  font-style: normal;
+  font-style: italic;
   color: var(--gold-light);
 }
 
 /* ─── Stats ─── */
 .stats {
   background: var(--warm);
-  padding: 60px 32px;
+  padding: 80px 32px;
 }
 
 .statsInner {
@@ -358,7 +358,7 @@
 
 .statValue {
   font-family: var(--font-display);
-  font-size: 42px;
+  font-size: clamp(32px, 4vw, 48px);
   font-weight: 700;
   color: var(--forest);
   margin-bottom: 8px;
@@ -423,47 +423,49 @@
 
 .programsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(26, 60, 42, 0.08);
 }
 
 .programCard {
-  background: white;
-  border-radius: 20px;
-  padding: 32px 28px;
-  border: 1px solid rgba(26, 60, 42, 0.06);
-  transition: all 0.4s;
+  background: transparent;
+  padding: 48px 44px;
+  /* Hairline dividers via box-shadow — no double-border at grid edges */
+  box-shadow:
+    1px 0 0 rgba(26, 60, 42, 0.08),
+    0 1px 0 rgba(26, 60, 42, 0.08);
+  transition: background 0.35s ease;
 }
 
 .programCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(26, 60, 42, 0.1);
-  border-color: var(--sage-light);
+  background: white;
 }
 
-.programIcon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  margin-bottom: 20px;
-  background: var(--warm);
+.programNum {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--sage-light);
+  margin-bottom: 28px;
+  display: block;
 }
 
 .programCard h3 {
   font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 600;
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 700;
   color: var(--forest);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .programCard p {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.8;
   color: var(--text-muted);
 }
 
@@ -559,7 +561,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  margin-top: 56px;
 }
 
 .storyCard {
@@ -620,7 +621,7 @@
 }
 
 .storyRole {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
 }
 
@@ -696,10 +697,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .programsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .storiesGrid {
     grid-template-columns: 1fr;
   }
@@ -719,11 +716,16 @@
   .videoFeatureContent {
     padding: 48px 32px;
   }
+
+  .programCard {
+    padding: 40px 32px;
+  }
 }
 
 @media (max-width: 600px) {
   .programsGrid {
     grid-template-columns: 1fr;
+    border-radius: 16px;
   }
 
   .statsInner {
@@ -743,5 +745,9 @@
 
   .scrollIndicator {
     display: none;
+  }
+
+  .programCard {
+    padding: 32px 28px;
   }
 }

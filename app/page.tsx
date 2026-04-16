@@ -222,10 +222,10 @@ export default function HomePage() {
 
           <div className={styles.programsGrid}>
             {PROGRAMS.map((program, i) => (
-              <FadeIn key={program.title} delay={i * 0.1}>
+              <FadeIn key={program.title} delay={i * 0.08}>
                 <article className={styles.programCard}>
-                  <div className={styles.programIcon} aria-hidden="true">
-                    {program.icon}
+                  <div className={styles.programNum} aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
                   </div>
                   <h3>{program.title}</h3>
                   <p>{program.desc}</p>

@@ -65,8 +65,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBottom}>
-        {/* TODO: replace year dynamically */}
-        <span>© 2025 Premier Health and Education Foundation. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Premier Health and Education Foundation. All rights reserved.</span>
         <div className={styles.footerBottomLinks}>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
