@@ -7,56 +7,66 @@ import styles from "./page.module.css";
 
 // TODO: SEO agent — add OG image, canonical URL, and JSON-LD WebPage schema
 export const metadata: Metadata = {
-  title: "Programs | Premier Health & Education Foundation",
+  title: "Our Programs | Premier Education and Health Foundation",
   description:
-    "Explore PEHF's four program pillars — Healthcare Access, Education Programs, Community Wellness, and Global Outreach — each designed to create lasting change in underserved communities.",
+    "PEHF's six core objectives: scholarships & bursaries, safe motherhood, adult literacy, quality education investment, quality medical care, and international partnerships.",
 };
 
 // TODO: replace with CMS data — content agent owns this block
 const PROGRAMS = [
   {
-    id: "healthcare",
-    tag: "Healthcare",
-    title: "Healthcare Access",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. We dismantle barriers to medical care by funding community clinics, mobile health units, and preventive-care screenings — ensuring every person can access the services they need regardless of income or geography.",
-    stat: { value: "48K+", label: "Lives Impacted" },
-    initials: "HA",
-    colorClass: "imageForest",
-    initialsOnGold: false,
-    href: "/programs/healthcare",
-  },
-  {
-    id: "education",
+    id: "scholarships",
     tag: "Education",
-    title: "Education Programs",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Through scholarships, mentorship, and after-school enrichment, we level the playing field for students whose potential far outpaces their available resources, building clear pathways into higher education.",
-    stat: { value: "2,400", label: "Scholarships Awarded" },
-    initials: "EP",
+    title: "Scholarships & Bursaries",
+    desc: "We provide monetary and scholastic support to financially needy learners at institutions aligned with Premier Education Institute. This includes full sponsorship for Top Class & P.1–P.3 pupils and partial bursaries for P.4–P.5 at Premier Preparatory School, Masaka.",
+    stat: { value: "$1,200", label: "Full Annual Sponsorship" },
+    initials: "SB",
+    colorClass: "imageForest",
+  },
+  {
+    id: "safe-motherhood",
+    tag: "Health",
+    title: "Safe Motherhood",
+    desc: "Through moral and monetary support, we ensure safe delivery of babies within the Premier Health Care system for destitute mothers who cannot afford care.",
+    stat: { value: "$150", label: "Safe Delivery Kit + Care" },
+    initials: "SM",
     colorClass: "imageGold",
-    initialsOnGold: true,
-    href: "/programs/education",
   },
   {
-    id: "wellness",
-    tag: "Community",
-    title: "Community Wellness",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Building healthier neighborhoods through nutrition education, mental health support, and community wellness workshops that strengthen the social fabric and create lasting resilience from within.",
-    stat: { value: "9", label: "Active Wellness Hubs" },
-    initials: "CW",
+    id: "adult-literacy",
+    tag: "Education",
+    title: "Adult Literacy Programs",
+    desc: "We sponsor illiteracy eradication programs for adults, run during school holidays, to break cycles of poverty through education.",
+    stat: { value: "Holidays", label: "Program Schedule" },
+    initials: "AL",
     colorClass: "imageSage",
-    initialsOnGold: false,
-    href: "/programs/wellness",
   },
   {
-    id: "global",
-    tag: "Global",
-    title: "Global Outreach",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Partnering with organizations worldwide to improve health literacy and educational equity, reaching communities across 15 countries and growing — because inequity does not stop at borders.",
-    stat: { value: "15", label: "Countries Reached" },
-    initials: "GO",
-    colorClass: "imageCoral",
-    initialsOnGold: false,
-    href: "/programs/global",
+    id: "quality-education",
+    tag: "Education",
+    title: "Quality Education Investment",
+    desc: "We optimize teacher salaries to retain highly qualified, dedicated instructors. We also construct and equip state-of-the-art classrooms, lecture theaters, laboratories, and research units.",
+    stat: { value: "$25K", label: "Builds a Classroom Block" },
+    initials: "QE",
+    colorClass: "imageForest",
+  },
+  {
+    id: "medical-care",
+    tag: "Health",
+    title: "Quality Medical Care",
+    desc: "We support the provision of quality medical care to patients within Premier Health Care system and the surrounding community in Masaka.",
+    stat: { value: "$5,000", label: "Funds 10 Safe Deliveries" },
+    initials: "QM",
+    colorClass: "imageGold",
+  },
+  {
+    id: "partnerships",
+    tag: "Fundraising",
+    title: "Partnerships & Fundraising",
+    desc: "We solicit donations nationally and internationally and cooperate with like-minded organizations to fund these objectives and multiply impact.",
+    stat: { value: "Global", label: "Donor Network" },
+    initials: "PF",
+    colorClass: "imageSage",
   },
 ];
 
@@ -74,16 +84,16 @@ export default function ProgramsPage() {
           <FadeIn delay={0.1}>
             {/* TODO: replace with CMS data */}
             <h1 className={styles.heroTitle}>
-              Programs that create<br />
-              <em>lasting change</em>
+              Six objectives.<br />
+              <em>One mission.</em>
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
             {/* TODO: replace with CMS data */}
             <p className={styles.heroDesc}>
-              Every programme we run flows from a single conviction: that access
-              to healthcare and education is a right, not a privilege. Explore
-              our four pillars below.
+              Every programme we run flows from a single conviction: that
+              quality education and healthcare are rights, not privileges.
+              Explore our six core objectives below.
             </p>
           </FadeIn>
         </div>
@@ -104,9 +114,7 @@ export default function ProgramsPage() {
                 className={`${styles.imagePlaceholder} ${styles[program.colorClass]}`}
                 aria-hidden="true"
               >
-                <span style={{ color: program.initialsOnGold ? "var(--forest)" : "white" }}>
-                  {program.initials}
-                </span>
+                <span>{program.initials}</span>
               </div>
             </FadeIn>
 
@@ -117,7 +125,10 @@ export default function ProgramsPage() {
                 {/* TODO: replace with CMS data */}
                 <h2 className={styles.programTitle}>{program.title}</h2>
                 <p className={styles.programDesc}>{program.desc}</p>
-                <div className={styles.programStat} aria-label={`${program.stat.value} ${program.stat.label}`}>
+                <div
+                  className={styles.programStat}
+                  aria-label={`${program.stat.value} — ${program.stat.label}`}
+                >
                   <span className={styles.programStatValue} aria-hidden="true">
                     {program.stat.value}
                   </span>
@@ -125,9 +136,8 @@ export default function ProgramsPage() {
                     {program.stat.label}
                   </span>
                 </div>
-                <Link href={program.href} className={styles.programLink}>
-                  Explore {program.title}{" "}
-                  <span aria-hidden="true">→</span>
+                <Link href="/apply" className={styles.programLink}>
+                  Apply for Support <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </FadeIn>
@@ -139,13 +149,14 @@ export default function ProgramsPage() {
       <section className={styles.cta} aria-label="Take action">
         <FadeIn>
           <div className={styles.ctaInner}>
-            {/* Decorative gold rule — no radial glows, differentiated from homepage/our-work CTA */}
             <div className={styles.ctaDecor} aria-hidden="true" />
             {/* TODO: replace with CMS data */}
-            <h2 className={styles.ctaTitle}>Ready to make a difference?</h2>
+            <h2 className={styles.ctaTitle}>
+              Your Gift Educates a Child. Saves a Mother. Builds a Nation.
+            </h2>
             <div className={styles.ctaBtns}>
               <Link href="/donate" className={styles.btnGold}>
-                Make a Donation <span aria-hidden="true">♥</span>
+                Donate Now <span aria-hidden="true">♥</span>
               </Link>
               <Link href="/contact#partner" className={styles.btnGhost}>
                 Partner With Us

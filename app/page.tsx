@@ -17,58 +17,64 @@ import styles from "./page.module.css";
 // TODO: replace with CMS data — content agent owns this block
 const PROGRAMS = [
   {
-    icon: "🏥",
-    title: "Healthcare Access",
-    desc: "Bringing essential medical services, screenings, and preventive care to underserved communities across the nation.",
-    href: "/programs#healthcare",
+    icon: "🎓",
+    title: "Scholarships & Bursaries",
+    desc: "Full sponsorship for Top Class & P.1–P.3 pupils and partial bursaries for P.4–P.5 at Premier Preparatory School, Masaka.",
+    href: "/programs#scholarships",
   },
   {
-    icon: "📚",
-    title: "Education Programs",
-    desc: "Scholarships, mentorship, and after-school programs that open doors for students who need it most.",
-    href: "/programs#education",
+    icon: "🤰",
+    title: "Safe Motherhood",
+    desc: "Moral and monetary support to ensure safe delivery of babies within the Premier Health Care system for destitute mothers.",
+    href: "/programs#safe-motherhood",
+  },
+  {
+    icon: "📖",
+    title: "Adult Literacy",
+    desc: "Sponsoring illiteracy eradication programs for adults, run during school holidays, to break cycles of poverty through education.",
+    href: "/programs#adult-literacy",
+  },
+  {
+    icon: "🏫",
+    title: "Quality Education Investment",
+    desc: "Optimizing teacher salaries to retain qualified instructors. Constructing and equipping classrooms, labs, and research units.",
+    href: "/programs#quality-education",
+  },
+  {
+    icon: "🏥",
+    title: "Quality Medical Care",
+    desc: "Provisioning quality medical care to patients within Premier Health Care system and the surrounding community.",
+    href: "/programs#medical-care",
   },
   {
     icon: "🤝",
-    title: "Community Wellness",
-    desc: "Building healthier neighborhoods through nutrition education, mental health support, and wellness workshops.",
-    href: "/programs#wellness",
-  },
-  {
-    icon: "🌍",
-    title: "Global Outreach",
-    desc: "Partnering with organizations worldwide to improve health literacy and educational equity.",
-    href: "/programs#global",
+    title: "Partnerships & Fundraising",
+    desc: "Soliciting donations nationally and internationally and cooperating with like-minded organizations to multiply impact.",
+    href: "/programs#partnerships",
   },
 ];
 
 // TODO: replace with CMS data — content agent owns this block
 const STATS = [
-  { value: "48K+",  label: "Lives Impacted" },
-  { value: "120",   label: "Partner Clinics" },
-  { value: "2,400", label: "Scholarships Awarded" },
-  { value: "15",    label: "Countries Reached" },
+  { value: "85%",    label: "Funds Direct to Programs" },
+  { value: "2024",   label: "Year Founded" },
+  { value: "6",      label: "Core Objectives" },
+  { value: "Masaka", label: "Uganda — Home Base" },
 ];
 
 // TODO: replace with CMS data — content agent owns this block
 const STORIES = [
   {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.",
-    name: "Lorem Ipsum",
-    role: "Lorem Ipsum, 2019",
-    initials: "LI",
+    quote: "Before PEHF, I thought I'd drop out in P.3. Now I'm top of my class and want to be a doctor.",
+    name: "Mary",
+    role: "Age 9, PEHF Scholar",
+    initials: "M",
   },
   {
-    quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.",
-    name: "Lorem Ipsum",
-    role: "Lorem Ipsum Program",
-    initials: "LI",
-  },
-  {
-    quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.",
-    name: "Lorem Ipsum",
-    role: "Lorem & Ipsum",
-    initials: "LI",
+    quote: "PEHF paid for my delivery. My baby and I are alive because of you.",
+    name: "Nakato",
+    role: "Mother, Masaka",
+    initials: "N",
   },
 ];
 
@@ -128,28 +134,35 @@ export default function HomePage() {
           <div className={styles.heroTag}>
             <span className={styles.heroTagDot} aria-hidden="true" />
             {/* TODO: replace with CMS data */}
-            Transforming Communities Since 2008
+            Achieving Excellence Together
           </div>
 
           <h1>
-            Better Health.<br />Brighter <em>Futures.</em>
+            Achieving <em>Excellence</em><br />Together
           </h1>
 
           {/* TODO: replace with CMS data */}
           <p className={styles.heroDesc}>
-            The Premier Health and Education Foundation empowers underserved
-            communities through accessible healthcare and transformative
-            educational programs.
+            Premier Education and Health Foundation Ltd transforms lives in Uganda
+            through scholarships, safe motherhood, and quality education &amp; healthcare.
           </p>
 
           <div className={styles.heroBtns}>
             <Link href="/donate" className={styles.btnPrimary}>
-              Make a Donation <span aria-hidden="true">→</span>
+              Donate Now <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/#programs" className={styles.btnSecondary}>
-              See Our Impact
+            <Link href="/apply" className={styles.btnSecondary}>
+              Sponsor a Child
+            </Link>
+            <Link href="/impact" className={styles.btnSecondary}>
+              Our Impact
             </Link>
           </div>
+
+          {/* TODO: replace with CMS data */}
+          <p className={styles.heroTrustBadge}>
+            Registered with Uganda Registration Services Bureau &mdash; Certificate of Incorporation: 14th March 2024
+          </p>
         </div>
 
         {/* Video playback controls */}
@@ -185,9 +198,9 @@ export default function HomePage() {
           <FadeIn>
             {/* TODO: replace with CMS data */}
             <h2>
-              We are committed to <em>reducing health disparities</em> and
-              expanding <em>educational opportunity</em> for communities
-              that need it most.
+              We transform lives in Uganda through <em>scholarships,</em>{" "}
+              <em>safe motherhood,</em> and{" "}
+              <em>quality education &amp; healthcare.</em>
             </h2>
           </FadeIn>
         </div>
@@ -212,11 +225,11 @@ export default function HomePage() {
         <div className={styles.programsInner}>
           <FadeIn>
             <div className={styles.sectionTag}>What We Do</div>
-            <h2 className={styles.sectionTitle}>Programs that create lasting change</h2>
+            <h2 className={styles.sectionTitle}>Six objectives. One mission.</h2>
             {/* TODO: replace with CMS data */}
             <p className={styles.sectionDesc}>
-              We invest in four key areas where health and education intersect,
-              creating holistic support systems for communities in need.
+              Every programme we run flows from our founding conviction: that
+              quality education and healthcare are rights, not privileges.
             </p>
           </FadeIn>
 
@@ -255,17 +268,17 @@ export default function HomePage() {
         <div className={styles.videoFeatureContent}>
           <FadeIn>
             <div className={styles.sectionTag} style={{ color: "var(--sage-light)" }}>
-              Featured Story
+              Our Reach
             </div>
             {/* TODO: replace with CMS data */}
             <h2>Education is the most powerful tool for change</h2>
             <p>
-              Through our scholarship and mentorship programs, we&apos;ve helped
-              over 2,400 students access higher education — creating ripple
-              effects that lift entire communities.
+              From Premier Preparatory School in Masaka to mothers across the
+              community — our scholarships, bursaries, and safe motherhood
+              programme build futures that last.
             </p>
-            <Link href="/about" className={styles.btnOutlineLight}>
-              Watch Full Story <span aria-hidden="true">▶</span>
+            <Link href="/programs" className={styles.btnOutlineLight}>
+              Explore All Programs <span aria-hidden="true">→</span>
             </Link>
           </FadeIn>
         </div>
@@ -279,8 +292,8 @@ export default function HomePage() {
             <h2 className={styles.sectionTitle}>Voices from our community</h2>
             {/* TODO: replace with CMS data */}
             <p className={styles.sectionDesc}>
-              Every donation, every volunteer hour, every program creates ripple
-              effects that transform lives. Here are just a few of those stories.
+              Every donation, every scholarship, every safe delivery creates
+              ripple effects. Here are just a few of those stories.
             </p>
           </FadeIn>
 
@@ -314,17 +327,17 @@ export default function HomePage() {
           <div className={styles.ctaInner}>
             <div className={styles.ctaTag} aria-hidden="true">✦ Make a Difference Today</div>
             {/* TODO: replace with CMS data */}
-            <h2>Your generosity changes lives</h2>
+            <h2>Your Gift Educates a Child. Saves a Mother. Builds a Nation.</h2>
             <p>
-              Every contribution, no matter the size, helps us expand access
-              to healthcare and education for those who need it most.
+              Every contribution strengthens both education and healthcare in
+              the same Ugandan communities. 85% of funds go straight to programs.
             </p>
             <div className={styles.ctaBtns}>
               <Link href="/donate" className={styles.btnGold}>
                 Donate Now <span aria-hidden="true">♥</span>
               </Link>
-              <Link href="/volunteer" className={styles.btnGhost}>
-                Become a Volunteer
+              <Link href="/apply" className={styles.btnGhost}>
+                Sponsor a Child
               </Link>
             </div>
           </div>

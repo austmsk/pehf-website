@@ -99,10 +99,10 @@
   /* TODO: replace with next/image when photography is available */
 }
 
-.imageForest { background: var(--forest); }
-.imageGold   { background: var(--gold); }
-.imageSage   { background: var(--sage); }
-.imageCoral  { background: var(--coral); }
+.imageForest { background: var(--forest); color: rgba(255,255,255,0.25); }
+.imageGold   { background: var(--gold);   color: rgba(26,60,42,0.25); }
+.imageSage   { background: var(--sage);   color: rgba(255,255,255,0.25); }
+.imageCoral  { background: var(--coral);  color: rgba(255,255,255,0.25); }
 
 /* ─── Program Content ─── */
 .contentWrapper {

@@ -6,11 +6,10 @@ import styles from "./Navigation.module.css";
 
 // TODO: replace with CMS data or site.config.ts
 const NAV_LINKS = [
-  { label: "Our Work", href: "/our-work" },
-  { label: "Programs", href: "/programs" },
-  { label: "Impact",   href: "/#impact" },
-  { label: "Stories",  href: "/#stories" },
   { label: "About",    href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Impact",   href: "/impact" },
+  { label: "Apply",    href: "/apply" },
   { label: "Contact",  href: "/contact" },
 ];
 
@@ -37,7 +36,7 @@ export default function Navigation() {
         <div className={styles.navInner}>
           <Link href="/" className={styles.navLogo} onClick={closeMenu}>
             <div className={styles.navLogoIcon} aria-hidden="true">P</div>
-            Premier Foundation
+            Premier Education and Health Foundation
           </Link>
 
           <div className={styles.navLinks}>

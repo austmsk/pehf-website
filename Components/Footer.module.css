@@ -26,6 +26,43 @@
   line-height: 1.7;
   color: var(--sage);
   max-width: 280px;
+  margin-bottom: 10px;
+}
+
+.footerTrust {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+
+.footerAddress {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--sage);
+  line-height: 1.5;
+}
+
+.footerAddress a {
+  color: var(--sage-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerAddress a:hover,
+.footerAddress a:focus-visible {
+  color: white;
+}
+
+.footerAddress a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .footerCol h4 {

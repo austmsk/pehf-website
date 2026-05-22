@@ -3,24 +3,28 @@ import styles from "./Footer.module.css";
 
 // TODO: replace with CMS data
 const PROGRAMS_LINKS = [
-  { label: "Healthcare Access",   href: "/programs#healthcare" },
-  { label: "Education Programs",  href: "/programs#education" },
-  { label: "Community Wellness",  href: "/programs#wellness" },
-  { label: "Global Outreach",     href: "/programs#global" },
+  { label: "Scholarships & Bursaries",  href: "/programs#scholarships" },
+  { label: "Safe Motherhood",           href: "/programs#safe-motherhood" },
+  { label: "Adult Literacy",            href: "/programs#adult-literacy" },
+  { label: "Quality Education",         href: "/programs#quality-education" },
+  { label: "Quality Medical Care",      href: "/programs#medical-care" },
+  { label: "Partnerships",              href: "/programs#partnerships" },
 ];
 
+// TODO: replace with CMS data
 const ORG_LINKS = [
-  { label: "About Us",       href: "/about" },
-  { label: "Our Team",       href: "/about#team" },
-  { label: "Annual Reports", href: "/about#reports" },
-  { label: "Careers",        href: "/about#careers" },
+  { label: "About Us",         href: "/about" },
+  { label: "Transparency",     href: "/about#transparency" },
+  { label: "Annual Reports",   href: "/about#reports" },
+  { label: "Governance",       href: "/about#governance" },
 ];
 
+// TODO: replace with CMS data
 const CONNECT_LINKS = [
-  { label: "Contact Us",      href: "/contact" },
-  { label: "Newsletter",      href: "/contact#newsletter" },
-  { label: "Press",           href: "/contact#press" },
-  { label: "Partner With Us", href: "/contact#partner" },
+  { label: "Contact Us",              href: "/contact" },
+  { label: "Partner With Us",         href: "/contact#partner" },
+  { label: "Newsletter",              href: "/contact#newsletter" },
+  { label: "Apply for Sponsorship",   href: "/apply" },
 ];
 
 export default function Footer() {
@@ -30,13 +34,27 @@ export default function Footer() {
         {/* Brand column */}
         <div>
           <div className={styles.footerBrand}>
-            Premier Health &amp;<br />Education Foundation
+            {/* TODO: replace with CMS data */}
+            Premier Education and Health<br />Foundation Ltd
           </div>
           {/* TODO: replace with CMS data */}
           <p className={styles.footerDesc}>
-            Empowering communities through healthcare access and educational
-            opportunity since 2008.
+            Transforming lives in Uganda through scholarships, safe motherhood,
+            and quality education &amp; healthcare. Incorporated 14 March 2024.
           </p>
+          <p className={styles.footerTrust}>
+            Registered with Uganda Registration Services Bureau
+          </p>
+
+          {/* Contact info block */}
+          {/* TODO: replace with CMS data */}
+          <address className={styles.footerAddress}>
+            <span>Premier Preparatory School Campus</span>
+            <span>P.O. Box 335, Masaka, Uganda</span>
+            <a href="tel:+256742693000">Tel: +256 742 693 000</a>
+            <a href="mailto:premier.prep.sch@gmail.com">premier.prep.sch@gmail.com</a>
+            <a href="mailto:partnerships@pehfuganda.org">partnerships@pehfuganda.org</a>
+          </address>
         </div>
 
         {/* Programs column */}
@@ -62,10 +80,13 @@ export default function Footer() {
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}
         </div>
-      </div>
+    </div>
 
       <div className={styles.footerBottom}>
-        <span>© {new Date().getFullYear()} Premier Health and Education Foundation. All rights reserved.</span>
+        <span>
+          &copy; {new Date().getFullYear()} Premier Education and Health Foundation Ltd.
+          All rights reserved.
+        </span>
         <div className={styles.footerBottomLinks}>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
