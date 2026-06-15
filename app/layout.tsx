@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   // TODO: SEO agent — add OG image, canonical URL, and JSON-LD Organization schema
-  title: "Premier Education and Health Foundation Ltd",
+  title: "Premier Education and Health Foundation",
   description:
     "Transforming lives in Uganda through scholarships, safe motherhood, and quality education & healthcare. Incorporated 14 March 2024.",
 };

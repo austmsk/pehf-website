@@ -10,47 +10,40 @@ import {
   PauseIcon,
   VolumeOnIcon,
   VolumeOffIcon,
-  ChevronDownIcon,
 } from "@/components/SvgIcons";
 import styles from "./page.module.css";
 
 // TODO: replace with CMS data — content agent owns this block
 const PROGRAMS = [
   {
-    icon: "🎓",
     title: "Scholarships & Bursaries",
     desc: "Full sponsorship for Top Class & P.1–P.3 pupils and partial bursaries for P.4–P.5 at Premier Preparatory School, Masaka.",
-    href: "/programs#scholarships",
+    href: "/what-we-do/scholarships",
   },
   {
-    icon: "🤰",
     title: "Safe Motherhood",
     desc: "Moral and monetary support to ensure safe delivery of babies within the Premier Health Care system for destitute mothers.",
-    href: "/programs#safe-motherhood",
+    href: "/what-we-do/safe-motherhood",
   },
   {
-    icon: "📖",
     title: "Adult Literacy",
     desc: "Sponsoring illiteracy eradication programs for adults, run during school holidays, to break cycles of poverty through education.",
-    href: "/programs#adult-literacy",
+    href: "/what-we-do/adult-literacy",
   },
   {
-    icon: "🏫",
     title: "Quality Education Investment",
     desc: "Optimizing teacher salaries to retain qualified instructors. Constructing and equipping classrooms, labs, and research units.",
-    href: "/programs#quality-education",
+    href: "/what-we-do/education",
   },
   {
-    icon: "🏥",
     title: "Quality Medical Care",
     desc: "Provisioning quality medical care to patients within Premier Health Care system and the surrounding community.",
-    href: "/programs#medical-care",
+    href: "/what-we-do/medical-care",
   },
   {
-    icon: "🤝",
     title: "Partnerships & Fundraising",
     desc: "Soliciting donations nationally and internationally and cooperating with like-minded organizations to multiply impact.",
-    href: "/programs#partnerships",
+    href: "/partner",
   },
 ];
 
@@ -134,7 +127,7 @@ export default function HomePage() {
           <div className={styles.heroTag}>
             <span className={styles.heroTagDot} aria-hidden="true" />
             {/* TODO: replace with CMS data */}
-            Achieving Excellence Together
+            Masaka, Uganda · Est. 2024
           </div>
 
           <h1>
@@ -143,21 +136,21 @@ export default function HomePage() {
 
           {/* TODO: replace with CMS data */}
           <p className={styles.heroDesc}>
-            Premier Education and Health Foundation Ltd transforms lives in Uganda
+            Premier Education and Health Foundation transforms lives in Uganda
             through scholarships, safe motherhood, and quality education &amp; healthcare.
           </p>
 
           <div className={styles.heroBtns}>
-            <Link href="/donate" className={styles.btnPrimary}>
-              Donate Now <span aria-hidden="true">→</span>
+            <Link href="/what-we-do" className={styles.btnPrimary}>
+              See Our Work <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/apply" className={styles.btnSecondary}>
-              Sponsor a Child
-            </Link>
-            <Link href="/impact" className={styles.btnSecondary}>
-              Our Impact
+            <Link href="/get-involved" className={styles.btnSecondary}>
+              Get Involved
             </Link>
           </div>
+          <Link href="/about/transparency" className={styles.heroTextLink}>
+            See our impact <span aria-hidden="true">→</span>
+          </Link>
 
           {/* TODO: replace with CMS data */}
           <p className={styles.heroTrustBadge}>
@@ -186,10 +179,7 @@ export default function HomePage() {
           </span>
         </div>
 
-        <a href="#mission" className={styles.scrollIndicator} aria-label="Scroll to content">
-          <span>Scroll</span>
-          <ChevronDownIcon />
-        </a>
+
       </section>
 
       {/* ═══ Mission Band ═══ */}
@@ -210,11 +200,9 @@ export default function HomePage() {
       <section className={styles.stats} id="impact" aria-label="Impact statistics">
         <div className={styles.statsInner}>
           {STATS.map((stat, i) => (
-            <FadeIn key={stat.label} delay={i * 0.1}>
-              <div>
-                <div className={styles.statValue}>{stat.value}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
-              </div>
+            <FadeIn key={stat.label} delay={i * 0.1} className={styles.statCell}>
+              <div className={styles.statLabel}>{stat.label}</div>
+              <div className={styles.statValue}>{stat.value}</div>
             </FadeIn>
           ))}
         </div>
@@ -277,7 +265,7 @@ export default function HomePage() {
               community — our scholarships, bursaries, and safe motherhood
               programme build futures that last.
             </p>
-            <Link href="/programs" className={styles.btnOutlineLight}>
+            <Link href="/what-we-do" className={styles.btnOutlineLight}>
               Explore All Programs <span aria-hidden="true">→</span>
             </Link>
           </FadeIn>
@@ -321,23 +309,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ CTA ═══ */}
-      <section className={styles.cta} id="donate" aria-label="Call to action">
+      {/* ═══ CTA — work-first; ask language lives on /donate (Tone & Money rules) ═══ */}
+      <section className={styles.cta} id="get-involved" aria-label="Call to action">
         <FadeIn>
           <div className={styles.ctaInner}>
-            <div className={styles.ctaTag} aria-hidden="true">✦ Make a Difference Today</div>
+            <div className={styles.ctaTag} aria-hidden="true">✦ Stand With Us</div>
             {/* TODO: replace with CMS data */}
-            <h2>Your Gift Educates a Child. Saves a Mother. Builds a Nation.</h2>
+            <h2>Education and healthcare, reinforcing each other in one community.</h2>
             <p>
-              Every contribution strengthens both education and healthcare in
-              the same Ugandan communities. 85% of funds go straight to programs.
+              85% of every contribution goes straight to programs in Masaka.
+              Explore the work, or find the way you'd like to take part.
             </p>
             <div className={styles.ctaBtns}>
-              <Link href="/donate" className={styles.btnGold}>
-                Donate Now <span aria-hidden="true">♥</span>
+              <Link href="/get-involved" className={styles.btnGold}>
+                Get Involved <span aria-hidden="true">→</span>
               </Link>
-              <Link href="/apply" className={styles.btnGhost}>
-                Sponsor a Child
+              <Link href="/what-we-do" className={styles.btnGhost}>
+                See Our Work
               </Link>
             </div>
           </div>

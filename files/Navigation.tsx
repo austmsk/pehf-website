@@ -105,7 +105,7 @@ export default function Navigation() {
             <div className={styles.navLogoIcon} aria-hidden="true">
               P
             </div>
-            Premier Education and Health Foundation
+            Premier Foundation
           </Link>
 
           <div className={styles.navLinks}>

@@ -1,0 +1,425 @@
+/* ─── Hero ─── */
+.hero {
+  background: var(--cream);
+  padding: 150px 32px 80px;
+  border-bottom: 1px solid rgba(26, 60, 42, 0.06);
+}
+
+.heroInner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sage);
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.breadcrumb:hover {
+  color: var(--forest);
+  gap: 12px;
+}
+
+.breadcrumb:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.heroDesc {
+  font-size: 18px;
+  line-height: 1.78;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ─── Section Tag ─── */
+.sectionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 16px;
+}
+
+.sectionTag::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold);
+  display: block;
+}
+
+/* ─── Body ─── */
+.body {
+  background: var(--cream);
+  padding: 100px 32px;
+}
+
+.bodyInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.imageSide {
+  position: sticky;
+  top: 100px;
+}
+
+.imagePlaceholder {
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  /* TODO: replace with next/image when photography is available */
+}
+
+.imageForest { background: var(--forest); color: rgba(255,255,255,0.25); }
+.imageGold   { background: var(--gold);   color: rgba(26,60,42,0.25); }
+.imageSage   { background: var(--sage);   color: rgba(255,255,255,0.25); }
+.imageCoral  { background: var(--coral);  color: rgba(255,255,255,0.25); }
+
+.statBox {
+  margin-top: 20px;
+  padding: 24px 28px;
+  background: white;
+  border: 1px solid rgba(26, 60, 42, 0.06);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--forest);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.para {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.para:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── How it works ─── */
+.points {
+  background: var(--warm);
+  padding: 100px 32px;
+}
+
+.pointsInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pointsTitle {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 48px;
+}
+
+.pointsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pointCard {
+  background: var(--cream);
+  border: 1px solid rgba(26, 60, 42, 0.06);
+  border-radius: 20px;
+  padding: 36px 32px;
+  height: 100%;
+}
+
+.pointNum {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.pointCard h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 12px;
+}
+
+.pointCard p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ─── Other objectives ─── */
+.others {
+  background: var(--cream);
+  padding: 100px 32px;
+}
+
+.othersInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.othersTitle {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 40px;
+}
+
+.othersList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.otherLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  background: white;
+  border: 1px solid rgba(26, 60, 42, 0.06);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.otherLink:hover {
+  transform: translateX(6px);
+  box-shadow: 0 12px 40px rgba(26, 60, 42, 0.08);
+}
+
+.otherLink:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.otherTag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sage);
+  min-width: 90px;
+}
+
+.otherName {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest);
+  flex: 1;
+}
+
+.otherArrow {
+  color: var(--gold);
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.otherLink:hover .otherArrow {
+  transform: translateX(4px);
+}
+
+/* ─── CTA ─── */
+.cta {
+  background: var(--forest);
+  padding: 100px 32px;
+}
+
+.ctaInner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaDecor {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 40px;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 40px;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─── Buttons ─── */
+.btnGold {
+  background: var(--gold);
+  color: var(--forest);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  border: none;
+  font-family: var(--font-body);
+}
+
+.btnGold:hover,
+.btnGold:focus-visible {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 168, 78, 0.3);
+}
+
+.btnGold:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+.btnGhost {
+  background: transparent;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
+  transition: border-color 0.3s, background 0.3s;
+  font-family: var(--font-body);
+}
+
+.btnGhost:hover,
+.btnGhost:focus-visible {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.btnGhost:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .hero {
+    padding: 130px 32px 64px;
+  }
+
+  .bodyInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageSide {
+    position: static;
+    max-width: 420px;
+  }
+
+  .pointsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 120px 24px 56px;
+  }
+
+  .heroDesc {
+    font-size: 16px;
+  }
+
+  .body,
+  .points,
+  .others {
+    padding: 64px 24px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .otherLink {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .cta {
+    padding: 72px 24px;
+  }
+
+  .ctaBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

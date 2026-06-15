@@ -3,28 +3,29 @@ import styles from "./Footer.module.css";
 
 // TODO: replace with CMS data
 const PROGRAMS_LINKS = [
-  { label: "Scholarships & Bursaries",  href: "/programs#scholarships" },
-  { label: "Safe Motherhood",           href: "/programs#safe-motherhood" },
-  { label: "Adult Literacy",            href: "/programs#adult-literacy" },
-  { label: "Quality Education",         href: "/programs#quality-education" },
-  { label: "Quality Medical Care",      href: "/programs#medical-care" },
-  { label: "Partnerships",              href: "/programs#partnerships" },
+  { label: "Scholarships & Bursaries",  href: "/what-we-do/scholarships" },
+  { label: "Safe Motherhood",           href: "/what-we-do/safe-motherhood" },
+  { label: "Adult Literacy",            href: "/what-we-do/adult-literacy" },
+  { label: "Quality Education",         href: "/what-we-do/education" },
+  { label: "Quality Medical Care",      href: "/what-we-do/medical-care" },
 ];
 
 // TODO: replace with CMS data
 const ORG_LINKS = [
-  { label: "About Us",         href: "/about" },
-  { label: "Transparency",     href: "/about#transparency" },
-  { label: "Annual Reports",   href: "/about#reports" },
-  { label: "Governance",       href: "/about#governance" },
+  { label: "About Us",                  href: "/about" },
+  { label: "Our Team",                  href: "/about/team" },
+  { label: "Impact & Accountability",   href: "/about/transparency" },
+  { label: "Annual Reports",            href: "/about/transparency" },
 ];
 
+// Connect — Donate sits here as one quiet link, not a repeated CTA.
 // TODO: replace with CMS data
 const CONNECT_LINKS = [
   { label: "Contact Us",              href: "/contact" },
-  { label: "Partner With Us",         href: "/contact#partner" },
   { label: "Newsletter",              href: "/contact#newsletter" },
-  { label: "Apply for Sponsorship",   href: "/apply" },
+  { label: "Volunteer",               href: "/volunteer" },
+  { label: "Partner With Us",         href: "/partner" },
+  { label: "Donate",                  href: "/donate" },
 ];
 
 export default function Footer() {
@@ -35,7 +36,7 @@ export default function Footer() {
         <div>
           <div className={styles.footerBrand}>
             {/* TODO: replace with CMS data */}
-            Premier Education and Health<br />Foundation Ltd
+            Premier Education and Health Foundation
           </div>
           {/* TODO: replace with CMS data */}
           <p className={styles.footerDesc}>
@@ -57,9 +58,9 @@ export default function Footer() {
           </address>
         </div>
 
-        {/* Programs column */}
+        {/* What We Do column */}
         <div className={styles.footerCol}>
-          <h4>Programs</h4>
+          <h4>What We Do</h4>
           {PROGRAMS_LINKS.map((l) => (
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}
@@ -68,6 +69,7 @@ export default function Footer() {
         {/* Organization column */}
         <div className={styles.footerCol}>
           <h4>Organization</h4>
+
           {ORG_LINKS.map((l) => (
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}
@@ -84,7 +86,7 @@ export default function Footer() {
 
       <div className={styles.footerBottom}>
         <span>
-          &copy; {new Date().getFullYear()} Premier Education and Health Foundation Ltd.
+          &copy; {new Date().getFullYear()} Premier Education and Health Foundation.
           All rights reserved.
         </span>
         <div className={styles.footerBottomLinks}>

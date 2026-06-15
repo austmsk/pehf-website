@@ -78,6 +78,22 @@ Build pages and components that integrate seamlessly with the existing homepage 
 - **Navigation:** Fixed, transparent over heroes, `rgba(250,248,244,0.95)` + backdrop-blur on scroll.
 - **Video sections:** Full-bleed with gradient overlay, play/pause + mute controls.
 
+### Tone & Money Language
+
+PEHF's site leads with the work, not the ask. Rules of thumb:
+
+- Heroes and landing pages: mission and evidence first. Primary CTAs point
+  to work/involvement ("See Our Work", "Get Involved"), never to giving.
+- `/donate` is the single ask-appropriate page. Headlines like "Your Gift
+  Educates a Child. Saves a Mother." belong there and only there.
+- Sponsorship ("Sponsor a Child") may appear in Get Involved menus and on
+  `/donate` — it reads as a relationship, not a cash request — but is never
+  the first or most prominent item.
+- Accountability content (where money went) is encouraged everywhere as
+  trust-building: stats bands, transparency callouts, annual report links.
+- Footer: Donate is one quiet link under the "Connect" column, not a
+  repeated CTA block.
+
 ### Existing Shared Components — Import, Never Rewrite
 
 - `FadeIn` / `useInView`
@@ -101,20 +117,27 @@ Build pages and components that integrate seamlessly with the existing homepage 
 5. **Verify** — run through the Quality Checklist below.
 6. **Report** — use the ✅ / ⚠️ summary format.
 
-### Pages to Build (in order)
+### Site Map (mission-first IA)
 
-| # | Page | Route | Status |
-|---|---|---|---|
-| 1 | Home | `/` | ✅ Reference implementation |
-| 2 | About Us | `/about` | — |
-| 3 | Programs | `/programs` | — |
-| 4 | Donate | `/donate` | — |
-| 5 | Impact | `/impact` | — |
-| 6 | Events | `/events` | — |
-| 7 | Volunteer | `/volunteer` | — |
-| 8 | Blog | `/blog` | — |
-| 9 | Contact | `/contact` | — |
-| 10 | FAQ | `/faq` | — |
+Navigation is organised around five pillars, not a flat link list. Parent
+tabs are clickable landing pages; dropdown children are detail pages.
+
+| Pillar / Route | Children | Status |
+|---|---|---|
+| `/` Home | — | ✅ Reference implementation |
+| `/what-we-do` (What We Do) | `/what-we-do/[slug]` for scholarships, safe-motherhood, adult-literacy, education, medical-care | ✅ Built (dynamic detail route) |
+| `/where-we-work` (Where We Work) | — Masaka, Uganda: map, Premier Prep School, Premier Health Care | ✅ Built |
+| `/get-involved` (Get Involved) | `/volunteer`, `/partner`, `/events`, `/donate` (Sponsor a Child) | ✅ Built |
+| `/about` (About Us) | `/about/team`, `/about/transparency` (Impact & Accountability), `/contact` | ✅ Built |
+| `/blog` (Stories) | — | ✅ Built |
+| `/donate` | The ONE page where ask-language is appropriate | — |
+| `/contact` | — | ✅ Built |
+| `/faq` | — | — |
+
+Redirects (in `next.config.ts`): `/programs` → `/what-we-do`,
+`/our-work` → `/what-we-do`, `/impact` → `/about/transparency`.
+`/apply` still exists but is not in the nav — fold into
+`/what-we-do/scholarships` when revisited.
 
 ### File Structure Convention
 
@@ -161,6 +184,16 @@ public/
 - No external placeholder images (unsplash, placeholder.com) — use colored divs with initials.
 - No new pages without adding them to Navigation.
 - No icon-only buttons without `aria-label`.
+- No donation asks outside `/donate` and the nav/footer Donate links.
+  Specifically: no "Donate" banners or CTA bands between page sections,
+  no "Give Now" buttons in heroes, no urgency language ("Now", "Today",
+  "Urgent") on giving CTAs anywhere. The nav pill is labeled "Donate",
+  not "Donate Now".
+- Money may be discussed prominently ONLY as accountability: funds raised,
+  allocation breakdowns, % to programs, audited figures, and concrete
+  outcomes ("X scholarships funded in 2025"). This content lives on
+  `/about/transparency` and may be referenced elsewhere as evidence,
+  never as an ask.
 
 ### Quality Checklist
 
