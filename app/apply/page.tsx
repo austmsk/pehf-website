@@ -40,7 +40,7 @@ const IMPORTANT_NOTES = [
 export default function ApplyPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="Apply for sponsorship">

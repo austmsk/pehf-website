@@ -52,7 +52,7 @@ const WAYS = [
 export default function GetInvolvedPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="Get involved hero">

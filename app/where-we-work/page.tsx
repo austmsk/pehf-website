@@ -33,7 +33,7 @@ const INSTITUTIONS = [
 export default function WhereWeWorkPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="Where we work hero">

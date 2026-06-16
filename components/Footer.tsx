@@ -70,6 +70,7 @@ export default function Footer() {
         <div className={styles.footerCol}>
           <h4>Organization</h4>
 
+
           {ORG_LINKS.map((l) => (
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}

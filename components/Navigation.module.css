@@ -89,6 +89,31 @@
   outline-color: var(--forest);
 }
 
+/* ─── Light theme: dark text over a light (--cream) hero, before scroll ─── */
+.nav.light .navLogo {
+  color: var(--forest);
+}
+
+.nav.light .navLinks a {
+  color: var(--text-muted);
+}
+
+.nav.light .navLinks a:hover {
+  color: var(--forest);
+}
+
+.nav.light .navLinks a:focus-visible {
+  outline-color: var(--forest);
+}
+
+.nav.light .navLinks .navDonate {
+  border-color: transparent;
+}
+
+.nav.light .hamburger span {
+  background: var(--forest);
+}
+
 /* ─── Desktop dropdown groups ─── */
 .navGroup {
   position: relative;
@@ -127,6 +152,17 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Invisible hover bridge: spans the gap between the trigger and the menu so
+   the cursor never leaves the group while travelling down to the items. */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 18px;
 }
 
 .navGroup:hover .dropdown,

@@ -43,7 +43,7 @@ const ROLES = [
 export default function VolunteerPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       <section className={styles.hero} aria-label="Volunteer hero">
         <div className={styles.heroInner}>

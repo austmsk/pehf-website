@@ -18,7 +18,7 @@ const EVENTS: { day: string; month: string; title: string; meta: string }[] = []
 export default function EventsPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       <section className={styles.hero} aria-label="Events hero">
         <div className={styles.heroInner}>

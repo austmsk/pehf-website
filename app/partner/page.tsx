@@ -35,7 +35,7 @@ const PARTNERS = [
 export default function PartnerPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       <section className={styles.hero} aria-label="Partner hero">
         <div className={styles.heroInner}>

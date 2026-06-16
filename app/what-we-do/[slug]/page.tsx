@@ -45,7 +45,7 @@ export default async function ProgramDetailPage({
 
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label={program.title}>

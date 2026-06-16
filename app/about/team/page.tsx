@@ -61,7 +61,7 @@ const TEAM = [
 export default function TeamPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="Our team hero">

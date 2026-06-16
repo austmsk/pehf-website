@@ -60,7 +60,7 @@ const TRANSPARENCY_POINTS = [
 export default function TransparencyPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="Impact and accountability hero">

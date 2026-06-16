@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function WhatWeDoPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="What we do overview">

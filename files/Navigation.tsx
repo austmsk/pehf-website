@@ -43,7 +43,6 @@ const NAV_LINKS: NavItem[] = [
       { label: "Contact", href: "/contact" },
     ],
   },
-  { label: "Stories", href: "/blog" },
 ];
 
 function ChevronDown() {
@@ -67,7 +66,13 @@ function ChevronDown() {
   );
 }
 
-export default function Navigation() {
+// `theme` controls the unscrolled (transparent) state:
+//   "dark"  — white text, for pages with a dark hero (video / --forest).
+//   "light" — dark text, for pages with a light --cream hero where white
+//             text would be unreadable. Once scrolled, both look identical.
+type NavTheme = "dark" | "light";
+
+export default function Navigation({ theme = "dark" }: { theme?: NavTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
@@ -96,7 +101,9 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}
+        className={`${styles.nav} ${scrolled ? styles.scrolled : ""} ${
+          theme === "light" ? styles.light : ""
+        }`}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -105,7 +112,7 @@ export default function Navigation() {
             <div className={styles.navLogoIcon} aria-hidden="true">
               P
             </div>
-            Premier Foundation
+            Premier Education and Health Foundation
           </Link>
 
           <div className={styles.navLinks}>

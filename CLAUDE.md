@@ -129,7 +129,6 @@ tabs are clickable landing pages; dropdown children are detail pages.
 | `/where-we-work` (Where We Work) | — Masaka, Uganda: map, Premier Prep School, Premier Health Care | ✅ Built |
 | `/get-involved` (Get Involved) | `/volunteer`, `/partner`, `/events`, `/donate` (Sponsor a Child) | ✅ Built |
 | `/about` (About Us) | `/about/team`, `/about/transparency` (Impact & Accountability), `/contact` | ✅ Built |
-| `/blog` (Stories) | — | ✅ Built |
 | `/donate` | The ONE page where ask-language is appropriate | — |
 | `/contact` | — | ✅ Built |
 | `/faq` | — | — |
@@ -151,7 +150,6 @@ app/
   impact/page.jsx
   events/page.jsx
   volunteer/page.jsx
-  blog/page.jsx
   contact/page.jsx
   faq/page.jsx
 components/

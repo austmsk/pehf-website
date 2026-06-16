@@ -35,7 +35,7 @@ const GOVERNANCE_POINTS = [
 export default function AboutPage() {
   return (
     <>
-      <Navigation />
+      <Navigation theme="light" />
 
       {/* ═══ Hero ═══ */}
       <section className={styles.hero} aria-label="About us hero">
