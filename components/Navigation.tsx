@@ -11,17 +11,7 @@ type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const NAV_LINKS: NavItem[] = [
-  {
-    label: "What We Do",
-    href: "/what-we-do",
-    children: [
-      { label: "Scholarships & Bursaries", href: "/what-we-do/scholarships" },
-      { label: "Safe Motherhood", href: "/what-we-do/safe-motherhood" },
-      { label: "Adult Literacy", href: "/what-we-do/adult-literacy" },
-      { label: "Quality Education", href: "/what-we-do/education" },
-      { label: "Medical Care", href: "/what-we-do/medical-care" },
-    ],
-  },
+  { label: "What We Do", href: "/what-we-do" },
   { label: "Where We Work", href: "/where-we-work" },
   {
     label: "Get Involved",
