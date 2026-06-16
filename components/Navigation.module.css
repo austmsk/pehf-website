@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  transition: all 0.4s ease;
+  transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 .nav.scrolled {
@@ -26,11 +26,13 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 20px;
+  line-height: 1.15;
   color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   transition: color 0.4s;
 }
 
@@ -340,7 +342,7 @@
 .mobileChevron {
   display: inline-flex;
   transition: transform 0.25s ease;
-  color: var(--sage);
+  color: var(--sage-text);
 }
 
 .mobileChevronOpen {
@@ -437,5 +439,53 @@
 
   .hamburger {
     display: block;
+  }
+
+  /* Shrink the wordmark so the long brand name fits beside the hamburger
+     and the nav keeps a stable height (the mobile menu anchors to it). */
+  .navInner {
+    padding: 14px 24px;
+    min-height: 64px;
+  }
+
+  .navLogo {
+    font-size: 16px;
+    gap: 9px;
+  }
+
+  .navLogoIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobileMenu {
+    top: 64px;
+    max-height: calc(100vh - 64px);
+    max-height: calc(100dvh - 64px);
+    padding: 8px 24px 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navInner {
+    padding: 13px 20px;
+    min-height: 60px;
+  }
+
+  .navLogo {
+    font-size: 14.5px;
+  }
+
+  .mobileMenu {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+    max-height: calc(100dvh - 60px);
+    padding: 8px 20px 28px;
+  }
+
+  .mobileLink,
+  .mobileGroupToggle {
+    padding: 16px 0;
+    font-size: 17px;
   }
 }

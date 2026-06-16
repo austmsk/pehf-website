@@ -48,7 +48,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 16px;
 }
 
@@ -162,7 +162,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-light);
 }
 
 .tierRow {
@@ -185,12 +185,11 @@
 }
 
 .tierHighlight {
-  background: rgba(200, 168, 78, 0.06);
-  border-left: 3px solid var(--gold);
+  background: rgba(200, 168, 78, 0.13);
 }
 
 .tierHighlight:hover {
-  background: rgba(200, 168, 78, 0.1);
+  background: rgba(200, 168, 78, 0.18);
 }
 
 .tierAmount {
@@ -272,12 +271,15 @@
   font-weight: 600;
   color: var(--forest);
   text-decoration: none;
-  transition: gap 0.3s;
 }
 
-.infoLink:hover,
-.infoLink:focus-visible {
-  gap: 10px;
+.infoLink span {
+  transition: transform 0.3s;
+}
+
+.infoLink:hover span,
+.infoLink:focus-visible span {
+  transform: translateX(4px);
 }
 
 .infoLink:focus-visible {

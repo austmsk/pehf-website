@@ -17,15 +17,22 @@
   gap: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--sage);
+  color: var(--sage-text);
   text-decoration: none;
   margin-bottom: 24px;
-  transition: color 0.3s, gap 0.3s;
+  transition: color 0.3s;
+}
+
+.breadcrumb span {
+  transition: transform 0.3s;
 }
 
 .breadcrumb:hover {
   color: var(--forest);
-  gap: 12px;
+}
+
+.breadcrumb:hover span {
+  transform: translateX(-4px);
 }
 
 .breadcrumb:focus-visible {
@@ -60,7 +67,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 16px;
 }
 
@@ -134,7 +141,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
 }
 
 .para {
@@ -255,7 +262,7 @@
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   min-width: 90px;
 }
 

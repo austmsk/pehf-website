@@ -24,7 +24,7 @@
 .footerDesc {
   font-size: 14px;
   line-height: 1.7;
-  color: var(--sage);
+  color: var(--sage-light);
   max-width: 280px;
   margin-bottom: 10px;
 }
@@ -44,7 +44,7 @@
   flex-direction: column;
   gap: 6px;
   font-size: 13px;
-  color: var(--sage);
+  color: var(--sage-light);
   line-height: 1.5;
 }
 
@@ -69,7 +69,7 @@
   font-size: 12px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-light);
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -103,7 +103,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
-  color: var(--sage);
+  color: var(--sage-light);
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -115,7 +115,7 @@
 
 .footerBottomLinks a {
   text-decoration: none;
-  color: var(--sage);
+  color: var(--sage-light);
   transition: color 0.3s;
 }
 

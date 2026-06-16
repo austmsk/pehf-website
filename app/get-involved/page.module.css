@@ -42,7 +42,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 16px;
 }
 
@@ -130,11 +130,14 @@
   color: var(--forest);
   text-decoration: none;
   margin-top: auto;
-  transition: gap 0.3s ease;
 }
 
-.tileLink:hover {
-  gap: 14px;
+.tileLink span {
+  transition: transform 0.3s ease;
+}
+
+.tileLink:hover span {
+  transform: translateX(6px);
 }
 
 .tileLink:focus-visible {

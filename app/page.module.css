@@ -3,6 +3,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100svh;
   min-height: 600px;
   overflow: hidden;
   background: var(--forest-dark);
@@ -157,7 +158,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 .videoCtrlBtn:hover,
@@ -192,7 +193,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
   border: none;
   font-family: var(--font-body);
@@ -221,7 +222,7 @@
   align-items: center;
   gap: 8px;
   border: 1.5px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
   font-family: var(--font-body);
 }
@@ -248,7 +249,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
   border: none;
   font-family: var(--font-body);
@@ -278,7 +279,7 @@
   align-items: center;
   gap: 8px;
   border: 1.5px solid rgba(255, 255, 255, 0.38);
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
   font-family: var(--font-body);
 }
@@ -305,7 +306,7 @@
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   cursor: pointer;
   background: transparent;
   width: fit-content;
@@ -396,7 +397,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 16px;
 }
 
@@ -494,12 +495,15 @@
   font-weight: 600;
   color: var(--forest);
   text-decoration: none;
-  transition: gap 0.3s;
 }
 
-.programLink:hover,
-.programLink:focus-visible {
-  gap: 10px;
+.programLink span {
+  transition: transform 0.3s;
+}
+
+.programLink:hover span,
+.programLink:focus-visible span {
+  transform: translateX(4px);
 }
 
 .programLink:focus-visible {
@@ -585,7 +589,7 @@
   border-radius: 20px;
   padding: 36px 28px;
   border: 1px solid rgba(26, 60, 42, 0.06);
-  transition: all 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .storyCard:hover {
@@ -734,6 +738,12 @@
   .programsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .programs,
+  .stories,
+  .cta {
+    padding: 80px 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -752,12 +762,64 @@
     align-items: center;
   }
 
+  .heroBtns a {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
   .videoControls {
     bottom: 16px;
     left: 16px;
   }
 
+  /* Tighten section gutters and vertical rhythm for phones */
+  .videoHeroContent {
+    padding: 110px 20px 56px;
+  }
+
+  .missionBand {
+    padding: 48px 20px;
+  }
+
+  .stats {
+    padding: 56px 20px;
+  }
+
+  .statCell {
+    padding: 24px 16px;
+  }
+
+  .programs {
+    padding: 64px 20px;
+  }
+
   .programCard {
-    padding: 32px 28px;
+    padding: 32px 24px;
+  }
+
+  .videoFeatureContent {
+    padding: 48px 24px;
+  }
+
+  .stories {
+    padding: 64px 20px;
+  }
+
+  .storyCard {
+    padding: 32px 24px;
+  }
+
+  .cta {
+    padding: 64px 20px;
+  }
+
+  .ctaInner {
+    padding: 48px 24px;
+    border-radius: 24px;
+  }
+
+  .sectionDesc {
+    margin-bottom: 40px;
   }
 }

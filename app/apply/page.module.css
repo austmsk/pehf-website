@@ -42,7 +42,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 16px;
 }
 
@@ -403,7 +403,7 @@
   padding: 20px 24px;
   background: var(--warm);
   border-radius: 10px;
-  border-left: 3px solid var(--sage-light);
+  border: 1px solid var(--sage-light);
 }
 
 /* ─── Documents box ─── */
@@ -514,7 +514,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 6px;
 }
 

@@ -17,8 +17,9 @@ body {
 :root {
   --forest:       #1a3c2a;
   --forest-light: #2a5e40;
-  --sage:         #7a9e7e;
-  --sage-light:   #b8ccba;
+  --sage:         #7a9e7e;  /* decorative / borders / UI on light — NOT body text */
+  --sage-text:    #4f6b54;  /* a11y: sage as TEXT on light bg — ~5.7:1 on --cream (WCAG AA) */
+  --sage-light:   #b8ccba;  /* sage as text on DARK (--forest) surfaces */
   --cream:        #faf8f4;
   --warm:         #f0ebe1;
   --gold:         #c8a84e;
